@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --watch --coverage=false",
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand --coverage=false",
+    "test:verbose": "jest --passWithNoTests --runInBand --coverage=false",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "jest --passWithNoTests --coverage=false",
+    "test:ci": "npm test -- --coverage=true",
     "prepare": "husky install"
   },
   "keywords": [],
