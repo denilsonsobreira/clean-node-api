@@ -1,5 +1,4 @@
-import type { Authentication } from '../../../domain/use-cases/authentication'
-import type { HttpRequest, EmailValidator } from '../signup/signup-protocols'
+import type { HttpRequest, EmailValidator, Authentication } from './login-protocols'
 import { InvalidParamError, MissingParamError } from '../../errors'
 import { badRequest, serverError, unauthorized } from '../../helpers/http-helper'
 import { LoginController } from './login'
